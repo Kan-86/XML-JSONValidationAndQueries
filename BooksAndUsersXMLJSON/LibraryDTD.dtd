@@ -1,0 +1,12 @@
+<!ELEMENT Library (User+)>
+
+<!ELEMENT User (Name,Address,BooksRented+)>
+<!ATTLIST User Id ID #REQUIRED>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Address (#PCDATA)>
+<!ELEMENT BooksRented (Title,Author,Genre)>
+<!ATTLIST BooksRented Id ID #REQUIRED>
+<!ATTLIST BooksRented UserId IDREF #REQUIRED>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Author (#PCDATA)>
+<!ELEMENT Genre (#PCDATA)>

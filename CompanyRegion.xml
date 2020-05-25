@@ -3,18 +3,6 @@
 <!ELEMENT CompanyRegion (CompanyInformation+)>
 <!ELEMENT CompanyInformation (CompId,CompRegionId,CompTransPort,CompanyStreet,COMPANYINFO+)>
 
-<!ELEMENT CompId (#PCDATA)>
-<!ELEMENT CompRegionId (#PCDATA)>
-<!ELEMENT CompTransPort (#PCDATA)>
-<!ELEMENT CompanyStreet (#PCDATA)>
-
-<!ELEMENT COMPANYINFO (CompInfoId,City,Address,Zip,Region,CEO,Office+)>
-<!ELEMENT CompInfoId (#PCDATA)>
-<!ELEMENT City (#PCDATA)>
-<!ELEMENT Address (#PCDATA)>
-<!ELEMENT Zip (#PCDATA)>
-<!ELEMENT Region (#PCDATA)>
-<!ELEMENT CEO (#PCDATA)>
   
 <!ELEMENT Office (Department,Manager+)>
 <!ELEMENT Department (#PCDATA)>

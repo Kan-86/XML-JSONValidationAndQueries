@@ -2,7 +2,6 @@
 <!DOCTYPE CompanyRegion [
 <!ELEMENT CompanyRegion (CompanyInformation+)>
 <!ELEMENT CompanyInformation (CompId,CompRegionId,CompTransPort,CompanyStreet,COMPANYINFO+)>
-
 <!ELEMENT CompId (#PCDATA)>
 <!ELEMENT CompRegionId (#PCDATA)>
 <!ELEMENT CompTransPort (#PCDATA)>
