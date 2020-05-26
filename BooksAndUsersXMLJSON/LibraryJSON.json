@@ -1,0 +1,12 @@
+{
+  "Name": "string",
+  "Address": "string",
+  "BooksRented": [
+    {
+      "Title": "string",
+      "Author": "string",
+      "Price": "int",
+      "Genre": "string"
+    }
+  ]
+}

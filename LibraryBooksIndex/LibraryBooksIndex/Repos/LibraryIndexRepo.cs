@@ -9,5 +9,6 @@ namespace LibraryBooksIndex.Repos
 {
     public class LibraryIndexRepo: ILibraryIndexService
     {
+
     }
 }

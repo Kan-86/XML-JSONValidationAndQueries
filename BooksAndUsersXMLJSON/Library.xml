@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Library xmlns="urn:newbooks-schema">
+<Library xmlns:abbr="urn:newbooks-schema">
   <User UserId="ID1">
     <Name>Name1</Name>
     <Address>Address1</Address>

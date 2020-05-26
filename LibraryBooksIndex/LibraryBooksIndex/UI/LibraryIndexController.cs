@@ -18,28 +18,54 @@ namespace LibraryBooksIndex.UI
         private string xmlPath = ConfigurationManager.AppSettings["Path"];
         private string strExpression;
 
-        public void GetAllDocument()
+        public void AveragePriceOfBooks()
         {
-            // Load the document and set the root element.  
-            XmlDocument doc = new XmlDocument();
-            doc.Load(xmlPath);
-            XmlNode root = doc.DocumentElement;
+            OpenXML();
 
-            // Add the namespace.  
-            XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);
-            nsmgr.AddNamespace("bk", "urn:newbooks-schema");
+            // Find the average cost of a book.
+            // This expression uses standard XPath syntax.
+            strExpression = "sum(/Library/User/BooksRented/Price) div count(/Library/User/BooksRented/Price)";
 
-            // Select all nodes where the book price is greater than 10.00.  
-            XmlNodeList nodeList = root.SelectNodes(
-                 "descendant::bk:BooksRented[bk:Price>1500]", nsmgr);
-            foreach (XmlNode book in nodeList)
-            {
-                Console.WriteLine(book.OuterXml);
-            }
+            // Use the Evaluate method to return the evaluated expression.
+            Console.WriteLine("The average cost of the books are {0}", nav.Evaluate(strExpression));
 
-            // Display the updated document.  
-            doc.Save(Console.Out);
+            // Pause
             Console.ReadLine();
+        }
+
+        public void GetTitleWithPrice(string price)
+        {
+            OpenXML();
+            // Find the title of the books that are greater then 1500Kr
+            strExpression = $"/Library/User/BooksRented/Title[../Price>{price}]";
+
+            // Select the node and place the results in an iterator.
+            NodeIter = nav.Select(strExpression);
+
+            //Iterate through the results showing the element value.
+            while (NodeIter.MoveNext())
+            {
+                Console.WriteLine("Book Title: {0}", NodeIter.Current.Value);
+            };
+
+            // Pause
+            Console.ReadLine();
+        }
+
+        private void OpenXML()
+        {
+            // Open the XML.
+            docNav = new XPathDocument(xmlPath);
+
+            // Create a navigator to query with XPath.
+            nav = docNav.CreateNavigator();
+
+            XmlNamespaceManager ns = null;
+            if (nav.NameTable != null)
+            {
+                ns = new XmlNamespaceManager(nav.NameTable);
+                ns.AddNamespace("abbr", "urn:newbooks-schema");
+            }
         }
     }
 }
