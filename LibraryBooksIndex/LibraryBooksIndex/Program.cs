@@ -15,7 +15,8 @@ namespace LibraryBooksIndex
             LibraryIndexController libs = new LibraryIndexController();
             Console.WriteLine("Library Index Query\n" +
                 "\t 1.  Average Price of Books \n" +
-                "\t 2.  Get Titles with specific price");
+                "\t 2.  Get Titles with specific price \n" +
+                "\t 3.  Search for user by name");
 
             var input = Console.ReadLine();
             switch (input)
@@ -26,9 +27,15 @@ namespace LibraryBooksIndex
                     break;
                 case "2":
                     Console.Clear();
-                    Console.WriteLine("Please insert the price (Between 0 and 2599");
+                    Console.WriteLine("Please insert the price (Between 0 and 2599:");
                     var price = Console.ReadLine();
                     libs.GetTitleWithPrice(price);
+                    break;
+                case "3":
+                    Console.Clear();
+                    Console.WriteLine("Please input name you want to search for:");
+                    var name = Console.ReadLine();
+                    libs.SearchForUserByName(name);
                     break;
                 default:
                     break;

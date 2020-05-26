@@ -37,7 +37,7 @@ namespace LibraryBooksIndex.UI
         {
             OpenXML();
 
-            // Find the title of the books that are greater then 1500Kr
+            // Find the title of the books that are greater then inserted price
             strExpression = $"/Library/User/BooksRented/Title[../Price>{price}]";
 
             // Select the node and place the results in an iterator.
@@ -55,6 +55,37 @@ namespace LibraryBooksIndex.UI
             {
                 Console.WriteLine("Error, Not Found: Please search for values between 0 - 2599.");
             }
+            // Pause
+            Console.ReadLine();
+        }
+
+        public void SearchForUserByName(string name)
+        {
+            OpenXML();
+            //strExpression = $"//Library[descendant::text()[contains(., 'Name1')] ";
+
+
+            strExpression = $"/Library/User[contains(string(), '{name}')]";
+
+
+            NodeIter = nav.Select(strExpression);
+
+
+            
+
+            if (NodeIter.Count != 0)
+            {
+                //Iterate through the results showing the element value.
+                while (NodeIter.MoveNext())
+                {
+                    Console.WriteLine("User: {0}", NodeIter.Current.OuterXml);
+                };
+            }
+            else
+            {
+                Console.WriteLine("Error, Not Found: Please try again!");
+            }
+
             // Pause
             Console.ReadLine();
         }
