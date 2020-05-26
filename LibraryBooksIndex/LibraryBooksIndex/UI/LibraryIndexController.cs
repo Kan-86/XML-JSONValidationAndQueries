@@ -36,18 +36,25 @@ namespace LibraryBooksIndex.UI
         public void GetTitleWithPrice(string price)
         {
             OpenXML();
+
             // Find the title of the books that are greater then 1500Kr
             strExpression = $"/Library/User/BooksRented/Title[../Price>{price}]";
 
             // Select the node and place the results in an iterator.
             NodeIter = nav.Select(strExpression);
 
-            //Iterate through the results showing the element value.
-            while (NodeIter.MoveNext())
+            if (NodeIter.Count != 0)
             {
-                Console.WriteLine("Book Title: {0}", NodeIter.Current.Value);
-            };
-
+                //Iterate through the results showing the element value.
+                while (NodeIter.MoveNext())
+                {
+                    Console.WriteLine("Book Title: {0}", NodeIter.Current.Value);
+                };
+            }
+            else
+            {
+                Console.WriteLine("Error, Not Found: Please search for values between 0 - 2599.");
+            }
             // Pause
             Console.ReadLine();
         }

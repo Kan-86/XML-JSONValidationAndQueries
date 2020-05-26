@@ -26,7 +26,7 @@ namespace LibraryBooksIndex
                     break;
                 case "2":
                     Console.Clear();
-                    Console.WriteLine("Please insert the price");
+                    Console.WriteLine("Please insert the price (Between 0 and 2599");
                     var price = Console.ReadLine();
                     libs.GetTitleWithPrice(price);
                     break;
