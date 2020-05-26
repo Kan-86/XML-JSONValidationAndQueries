@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE Library SYSTEM "LibraryDTD.dtd">
 <Library>
-  <User>
+  <User UserId="">
     <Name></Name>
     <Address>Address1</Address>
-    <BooksRented>
+    <BooksRented BookId='' Rents=''>
       <Title></Title>
       <Author>Author1</Author>
       <Genre></Genre>
