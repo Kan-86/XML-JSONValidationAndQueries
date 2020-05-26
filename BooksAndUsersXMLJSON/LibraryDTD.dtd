@@ -3,9 +3,10 @@
 <!ATTLIST User UserId ID #REQUIRED>
 <!ELEMENT Name (#PCDATA)>
 <!ELEMENT Address (#PCDATA)>
-<!ELEMENT BooksRented (Title,Author,Genre)>
+<!ELEMENT BooksRented (Title,Author,Price,Genre)>
 <!ATTLIST BooksRented Rents IDREF #IMPLIED>
 <!ELEMENT Title (#PCDATA)>
 <!ELEMENT Author (#PCDATA)>
+<!ELEMENT Price (#PCDATA)>
 <!ELEMENT Genre (#PCDATA)>
 

@@ -3,10 +3,11 @@
 <Library>
   <User UserId="">
     <Name></Name>
-    <Address>Address1</Address>
-    <BooksRented BookId='' Rents=''>
+    <Address></Address>
+    <BooksRented Rents=''>
       <Title></Title>
-      <Author>Author1</Author>
+      <Author></Author>
+      <Price></Price>
       <Genre></Genre>
     </BooksRented>
   </User>
