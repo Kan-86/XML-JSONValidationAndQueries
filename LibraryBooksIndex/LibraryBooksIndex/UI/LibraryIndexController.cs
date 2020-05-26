@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.XPath;
 
@@ -45,10 +41,11 @@ namespace LibraryBooksIndex.UI
 
             if (NodeIter.Count != 0)
             {
+                Console.WriteLine("Books that cost more than: " + price);
                 //Iterate through the results showing the element value.
                 while (NodeIter.MoveNext())
                 {
-                    Console.WriteLine("Book Title: {0}", NodeIter.Current.Value);
+                    Console.WriteLine(NodeIter.Current.Value);
                 };
             }
             else
@@ -62,16 +59,10 @@ namespace LibraryBooksIndex.UI
         public void SearchForUserByName(string name)
         {
             OpenXML();
-            //strExpression = $"//Library[descendant::text()[contains(., 'Name1')] ";
-
 
             strExpression = $"/Library/User[contains(string(), '{name}')]";
 
-
             NodeIter = nav.Select(strExpression);
-
-
-            
 
             if (NodeIter.Count != 0)
             {
@@ -85,7 +76,6 @@ namespace LibraryBooksIndex.UI
             {
                 Console.WriteLine("Error, Not Found: Please try again!");
             }
-
             // Pause
             Console.ReadLine();
         }

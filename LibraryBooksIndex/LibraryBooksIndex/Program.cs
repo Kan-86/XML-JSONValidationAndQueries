@@ -29,12 +29,14 @@ namespace LibraryBooksIndex
                     Console.Clear();
                     Console.WriteLine("Please insert the price (Between 0 and 2599:");
                     var price = Console.ReadLine();
+                    Console.Clear();
                     libs.GetTitleWithPrice(price);
                     break;
                 case "3":
                     Console.Clear();
                     Console.WriteLine("Please input name you want to search for:");
                     var name = Console.ReadLine();
+                    Console.Clear();
                     libs.SearchForUserByName(name);
                     break;
                 default:
