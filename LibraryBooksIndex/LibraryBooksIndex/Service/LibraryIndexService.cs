@@ -41,7 +41,7 @@ namespace LibraryBooksIndex.Service
             Console.ReadLine();
         }
 
-        public void GetTitleWithPrice(string price)
+        public void GetTitleWithPrice(double price)
         {
             _libRepo = new LibraryIndexRepo();
             OpenXML();

@@ -16,7 +16,7 @@ namespace LibraryBooksIndex.UI
             _libService.AveragePriceOfBooks(name);
         }
 
-        public void GetTitleWithPrice(string price)
+        public void GetTitleWithPrice(double price)
         {
             _libService = new LibraryIndexUnvalidatedService();
             _libService.GetTitleWithPrice(price);

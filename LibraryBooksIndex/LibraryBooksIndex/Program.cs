@@ -64,7 +64,7 @@ namespace LibraryBooksIndex
             unvalLibs = new LibraryIndexUnvalidatedController();
             Console.Clear();
             Console.WriteLine("Please insert the price (Between 0 and 2599:");
-            var price = Console.ReadLine();
+            double price = Convert.ToDouble(Console.ReadLine());
             Console.Clear();
             if (val == "v")
             {

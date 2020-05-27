@@ -34,13 +34,23 @@ namespace LibraryBooksIndex.Service
                 Console.WriteLine($"Average price for {name} books " + val/amount);
                 Console.ReadLine();
             }
-
-
         }
 
-        public void GetTitleWithPrice(string price)
+        public void GetTitleWithPrice(double price)
         {
+            purchaseOrder = XElement.Load(xmlPath);
 
+            IEnumerable<XElement> getUser = from item in purchaseOrder.Descendants("User").Descendants("BooksRented")
+                                            where Convert.ToDouble(item.Element("Price").Value) > price
+                                            orderby (string)item.Element("Name")
+                                            select item;
+
+
+            foreach (var item in getUser)
+            {
+                Console.WriteLine(item.Element("Title").Value);
+            }
+            Console.ReadLine();
         }
 
         public void SearchForUserByName(string name)
