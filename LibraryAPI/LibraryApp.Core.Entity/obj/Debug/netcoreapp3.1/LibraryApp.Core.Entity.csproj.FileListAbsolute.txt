@@ -1,0 +1,9 @@
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core.Entity\bin\Debug\netcoreapp3.1\LibraryApp.Core.Entity.deps.json
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core.Entity\bin\Debug\netcoreapp3.1\LibraryApp.Core.Entity.dll
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core.Entity\bin\Debug\netcoreapp3.1\LibraryApp.Core.Entity.pdb
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core.Entity\obj\Debug\netcoreapp3.1\LibraryApp.Core.Entity.csprojAssemblyReference.cache
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core.Entity\obj\Debug\netcoreapp3.1\LibraryApp.Core.Entity.AssemblyInfoInputs.cache
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core.Entity\obj\Debug\netcoreapp3.1\LibraryApp.Core.Entity.AssemblyInfo.cs
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core.Entity\obj\Debug\netcoreapp3.1\LibraryApp.Core.Entity.dll
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core.Entity\obj\Debug\netcoreapp3.1\LibraryApp.Core.Entity.pdb
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core.Entity\obj\Debug\netcoreapp3.1\LibraryApp.Core.Entity.csproj.CoreCompileInputs.cache

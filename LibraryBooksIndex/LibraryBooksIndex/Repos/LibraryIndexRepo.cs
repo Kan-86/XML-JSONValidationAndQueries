@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LibraryBooksIndex.Repos
 {
-    public class LibraryIndexRepo: ILibraryIndexService
+    public class LibraryIndexRepo
     {
 
     }

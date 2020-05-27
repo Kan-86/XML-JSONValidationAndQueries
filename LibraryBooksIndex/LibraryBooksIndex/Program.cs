@@ -23,7 +23,10 @@ namespace LibraryBooksIndex
             {
                 case "1":
                     Console.Clear();
-                    libs.AveragePriceOfBooks();
+                    Console.WriteLine("Please insert the name to count Average price");
+                    var avrg = Console.ReadLine();
+                    Console.Clear();
+                    libs.AveragePriceOfBooks(avrg);
                     break;
                 case "2":
                     Console.Clear();

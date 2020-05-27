@@ -1,0 +1,11 @@
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core\bin\Release\netcoreapp3.1\LibraryApp.Core.deps.json
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core\bin\Release\netcoreapp3.1\LibraryApp.Core.dll
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core\bin\Release\netcoreapp3.1\LibraryApp.Core.pdb
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core\bin\Release\netcoreapp3.1\LibraryApp.Core.Entity.dll
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core\bin\Release\netcoreapp3.1\LibraryApp.Core.Entity.pdb
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core\obj\Release\netcoreapp3.1\LibraryApp.Core.csprojAssemblyReference.cache
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core\obj\Release\netcoreapp3.1\LibraryApp.Core.AssemblyInfoInputs.cache
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core\obj\Release\netcoreapp3.1\LibraryApp.Core.AssemblyInfo.cs
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core\obj\Release\netcoreapp3.1\LibraryApp.Core.csproj.CopyComplete
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core\obj\Release\netcoreapp3.1\LibraryApp.Core.dll
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.Core\obj\Release\netcoreapp3.1\LibraryApp.Core.pdb

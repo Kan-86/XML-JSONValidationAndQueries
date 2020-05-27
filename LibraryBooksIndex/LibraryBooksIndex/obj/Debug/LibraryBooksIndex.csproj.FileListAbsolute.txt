@@ -5,3 +5,6 @@ W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\LibraryBooksIndex\Librar
 W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\LibraryBooksIndex\LibraryBooksIndex\bin\Debug\LibraryBooksIndex.pdb
 W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\LibraryBooksIndex\LibraryBooksIndex\obj\Debug\LibraryBooksIndex.exe
 W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\LibraryBooksIndex\LibraryBooksIndex\obj\Debug\LibraryBooksIndex.pdb
+W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\LibraryBooksIndex\LibraryBooksIndex\bin\Debug\Newtonsoft.Json.dll
+W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\LibraryBooksIndex\LibraryBooksIndex\bin\Debug\Newtonsoft.Json.xml
+W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\LibraryBooksIndex\LibraryBooksIndex\obj\Debug\LibraryBooksIndex.csproj.CopyComplete

@@ -1,0 +1,15 @@
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.InfaStructure.Data\bin\Release\netcoreapp3.1\LibraryApp.InfaStructure.Data.deps.json
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.InfaStructure.Data\bin\Release\netcoreapp3.1\LibraryApp.InfaStructure.Data.dll
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.InfaStructure.Data\bin\Release\netcoreapp3.1\LibraryApp.InfaStructure.Data.pdb
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.InfaStructure.Data\bin\Release\netcoreapp3.1\LibraryApp.Core.dll
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.InfaStructure.Data\bin\Release\netcoreapp3.1\LibraryApp.Core.Entity.dll
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.InfaStructure.Data\bin\Release\netcoreapp3.1\LibraryApp.Core.Entity.pdb
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.InfaStructure.Data\bin\Release\netcoreapp3.1\LibraryApp.Core.pdb
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.InfaStructure.Data\obj\Release\netcoreapp3.1\LibraryApp.InfaStructure.Data.csprojAssemblyReference.cache
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.InfaStructure.Data\obj\Release\netcoreapp3.1\LibraryApp.InfaStructure.Data.AssemblyInfoInputs.cache
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.InfaStructure.Data\obj\Release\netcoreapp3.1\LibraryApp.InfaStructure.Data.AssemblyInfo.cs
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.InfaStructure.Data\obj\Release\netcoreapp3.1\LibraryApp.InfaStructure.Data.csproj.CopyComplete
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.InfaStructure.Data\obj\Release\netcoreapp3.1\LibraryApp.InfaStructure.Data.dll
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.InfaStructure.Data\obj\Release\netcoreapp3.1\LibraryApp.InfaStructure.Data.pdb
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.InfaStructure.Data\bin\Release\netcoreapp3.1\LibraryApp.InfaStructure.Data.runtimeconfig.json
+W:\Skoli\6onn\SYSFinalEXAM\LibraryAPI\LibraryAPI\LibraryApp.InfaStructure.Data\bin\Release\netcoreapp3.1\LibraryApp.InfaStructure.Data.runtimeconfig.dev.json

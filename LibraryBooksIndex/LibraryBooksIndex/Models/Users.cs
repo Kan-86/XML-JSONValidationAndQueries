@@ -11,6 +11,7 @@ namespace LibraryBooksIndex.Models
         public int UserId { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
+        public double AveragePriceOfBooks { get; set; }
         public ICollection<Books> BooksRented { get; set; }
     }
 }
