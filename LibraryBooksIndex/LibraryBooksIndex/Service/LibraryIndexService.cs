@@ -1,11 +1,7 @@
 ﻿using LibraryBooksIndex.Repos;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.XPath;
 
@@ -21,6 +17,9 @@ namespace LibraryBooksIndex.Service
         private string strExpression;
 
         LibraryIndexRepo _libRepo;
+
+        List<object> lisob;
+
         public void AveragePriceOfBooks(string name)
         {
             _libRepo = new LibraryIndexRepo();
@@ -75,9 +74,9 @@ namespace LibraryBooksIndex.Service
         {
             _libRepo = new LibraryIndexRepo();
             OpenXML();
-
+            lisob = new List<object>();
             strExpression = $"/Library/User[contains(string(), '{name}')]";
-
+            string text;
             NodeIter = nav.Select(strExpression);
 
             if (NodeIter.Count != 0)
