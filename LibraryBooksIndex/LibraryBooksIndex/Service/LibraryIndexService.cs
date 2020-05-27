@@ -30,8 +30,7 @@ namespace LibraryBooksIndex.Service
             // This expression uses standard XPath syntax.
             strExpression = $"sum(/Library/User/BooksRented[../Name = '{name}']/Price) " +
                 $"div count(/Library/User/BooksRented[../Name = '{name}']/Price)";
-            
-            //strExpression = "sum(/Library/User/BooksRented/Price) div count(/Library/User/BooksRented/Price)";
+
 
             double total = (double)nav.Evaluate(strExpression);
 
@@ -76,7 +75,7 @@ namespace LibraryBooksIndex.Service
             OpenXML();
             lisob = new List<object>();
             strExpression = $"/Library/User[contains(string(), '{name}')]";
-            string text;
+
             NodeIter = nav.Select(strExpression);
 
             if (NodeIter.Count != 0)
@@ -85,6 +84,8 @@ namespace LibraryBooksIndex.Service
                 while (NodeIter.MoveNext())
                 {
                     Console.WriteLine("User: {0}", NodeIter.Current.OuterXml);
+
+                    lisob.Add(NodeIter.Current.OuterXml);
                 };
             }
             else
