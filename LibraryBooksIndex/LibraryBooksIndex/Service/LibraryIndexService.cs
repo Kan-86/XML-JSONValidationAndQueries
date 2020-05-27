@@ -47,7 +47,7 @@ namespace LibraryBooksIndex.Service
             OpenXML();
 
             // Find the title of the books that are greater then inserted price
-            strExpression = $"/Library/User/BooksRented/Title[../Price>{price}]";
+            strExpression = $"/Library/User[//Price>{price}]";
 
             // Select the node and place the results in an iterator.
             NodeIter = nav.Select(strExpression);
@@ -58,7 +58,7 @@ namespace LibraryBooksIndex.Service
                 //Iterate through the results showing the element value.
                 while (NodeIter.MoveNext())
                 {
-                    Console.WriteLine(NodeIter.Current.Value);
+                    Console.WriteLine(NodeIter.Current.OuterXml);
                 };
             }
             else

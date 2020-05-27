@@ -48,14 +48,25 @@ namespace LibraryBooksIndex.Service
 
             foreach (var item in getUser)
             {
-                Console.WriteLine(item.Element("Title").Value);
+                Console.WriteLine(item.Parent);
             }
             Console.ReadLine();
         }
 
         public void SearchForUserByName(string name)
         {
+            purchaseOrder = XElement.Load(xmlPath);
 
+            IEnumerable<XElement> getUser = from item in purchaseOrder.Descendants("User")
+                                            where item.Element("Name").Value == name
+                                            select item;
+
+            foreach (var item in getUser)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.ReadLine();
         }
     }
 }
