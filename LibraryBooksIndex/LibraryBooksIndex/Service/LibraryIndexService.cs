@@ -13,7 +13,7 @@ namespace LibraryBooksIndex.Service
         private XPathDocument docNav;
         private XPathNodeIterator NodeIter;
 
-        private string xmlPath = ConfigurationManager.AppSettings["Path"];
+        private string xmlPath = ConfigurationManager.AppSettings["ValidatedXML"];
         private string strExpression;
 
         LibraryIndexRepo _libRepo;

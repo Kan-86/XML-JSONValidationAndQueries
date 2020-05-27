@@ -53,8 +53,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\LibraryIndexRepo.cs" />
     <Compile Include="Service\LibraryIndexService.cs" />
+    <Compile Include="Service\LibraryIndexUnvalidatedService.cs" />
     <Compile Include="UI\LibraryIndexController.cs" />
-    <Compile Include="UI\UnvalidatedXpathQueries.cs" />
+    <Compile Include="UI\LibraryIndexUnvalidatedController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
