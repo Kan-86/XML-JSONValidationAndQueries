@@ -25,10 +25,10 @@ namespace LibraryBooksIndex.UI
             _libService.SearchForUserByName(name);
         }
 
-        internal void ValidateXML()
+        internal void ValidateJson()
         {
             _libService = new LibraryIndexService();
-            _libService.ValidateXML();
+            _libService.ValidateJSONSchema();
         }
     }
 }

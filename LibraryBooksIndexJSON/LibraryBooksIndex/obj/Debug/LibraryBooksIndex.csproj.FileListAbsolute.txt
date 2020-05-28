@@ -18,3 +18,5 @@ W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\LibraryBooksIndexJSON\Li
 W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\LibraryBooksIndexJSON\LibraryBooksIndex\obj\Debug\LibraryBooksIndex.csproj.CopyComplete
 W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\LibraryBooksIndexJSON\LibraryBooksIndex\obj\Debug\LibraryBooksIndex.exe
 W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\LibraryBooksIndexJSON\LibraryBooksIndex\obj\Debug\LibraryBooksIndex.pdb
+W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\LibraryBooksIndexJSON\LibraryBooksIndex\bin\Debug\Newtonsoft.Json.Schema.dll
+W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\LibraryBooksIndexJSON\LibraryBooksIndex\bin\Debug\Newtonsoft.Json.Schema.xml
