@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Library">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="User">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Name" />
+        <xs:element ref="Address" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="BooksRented" />
+      </xs:sequence>
+      <xs:attribute name="UserId" type="xs:ID" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Name" type="xs:string" />
+  <xs:element name="Address" type="xs:string" />
+  <xs:element name="BooksRented">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Title" />
+        <xs:element ref="Author" />
+        <xs:element ref="Price" />
+        <xs:element ref="Genre" />
+      </xs:sequence>
+      <xs:attribute name="Rents" type="xs:IDREF" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Title" type="xs:string" />
+  <xs:element name="Author" type="xs:string" />
+  <xs:element name="Price">
+    <xs:simpleType>
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="999"/>
+        <xs:maxInclusive value="2599"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Genre" type="xs:string" />
+</xs:schema>
