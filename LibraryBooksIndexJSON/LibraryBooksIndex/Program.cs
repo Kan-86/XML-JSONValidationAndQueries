@@ -21,7 +21,8 @@ namespace LibraryBooksIndex
             Console.WriteLine("Library Index Query\n" +
             "\t 1.  Average Price of Books \n" +
             "\t 2.  Get Titles with specific price \n" +
-            "\t 3.  Search for user by name \n");
+            "\t 3.  Search for user by name \n" +
+            "\t 4.  Validate schema");
 
             var input = Console.ReadLine();
             switch (input)
@@ -35,8 +36,24 @@ namespace LibraryBooksIndex
                 case "3":
                     SearchForUserName(val);
                     break;
+                case "4":
+                    ValidateJson(val);
+                    break;
                 default:
                     break;
+            }
+        }
+
+        private static void ValidateJson(string val)
+        {
+            libs = new LibraryIndexController();
+            if (val == "v")
+            {
+                libs.ValidateJson();
+            }
+            else
+            {
+                libs.ValidateJson();
             }
         }
 
