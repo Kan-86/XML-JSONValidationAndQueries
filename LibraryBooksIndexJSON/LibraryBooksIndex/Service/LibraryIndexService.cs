@@ -19,18 +19,24 @@ namespace LibraryBooksIndex.Service
         string jsonFile = File.ReadAllText(@"W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\BooksAndUsersXMLJSON\LibraryMockJSON.json");
         public void AveragePriceOfBooks(string name)
         {
+            var userName = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Users>>(jsonFile);
 
-            var people = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Users>>(jsonFile);
-
-
-            var peopleOverForty = from p in people
+            var peopleOverForty = from p in userName
                                   where p.Name == name 
                                   select p;
 
+            int amount = 0;
+            int total = 0;
+
             foreach (var item in peopleOverForty)
             {
-                Console.WriteLine(name + " \n Address: " + item.Address);
+                foreach (var s in item.BooksRented)
+                {
+                    amount += 1;
+                    total += s.Price;
+                }
             }
+            Console.WriteLine($"Average price for this user is: {total / amount}");
             Console.ReadLine();
         }
 
