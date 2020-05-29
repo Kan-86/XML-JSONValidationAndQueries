@@ -25,10 +25,6 @@ namespace LibraryBooksIndex.Service
                                   .SelectMany(r => r.BooksRented)
                                   .Select(a => a.Price)
                                   select p;
-
-
-            
-
             if (averagePrice.Count() != 0)
             {
                 double result = averagePrice.Average();
