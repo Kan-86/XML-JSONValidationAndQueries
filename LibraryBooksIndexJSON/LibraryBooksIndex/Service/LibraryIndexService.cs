@@ -42,7 +42,22 @@ namespace LibraryBooksIndex.Service
 
         public void GetTitleWithPrice(double price)
         {
+            var userName = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Users>>(jsonFile);
 
+            var peopleOverForty = from p in userName
+                                  .SelectMany(p => p.BooksRented)
+                                  .Where(r => r.Price < price)
+                                  .Select(n => n.Title)
+                                  select p.ToString();
+
+            Console.WriteLine($"Titles that cost more than {price} are: \n");
+
+            foreach (var item in peopleOverForty)
+            {
+                Console.WriteLine($"Title: {item}");
+            }
+
+            Console.ReadLine();
         }
 
         public void SearchForUserByName(string name)
@@ -66,12 +81,8 @@ namespace LibraryBooksIndex.Service
             }
             Console.ReadLine();
         }
-
-        private void OpenXML()
-        {
-
-        }
     }
+
     public class ValidateResponse
     {
         public bool Valid { get; set; }
