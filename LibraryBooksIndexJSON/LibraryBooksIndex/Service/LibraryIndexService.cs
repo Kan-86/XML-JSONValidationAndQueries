@@ -22,7 +22,9 @@ namespace LibraryBooksIndex.Service
             var userName = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Users>>(jsonFile);
 
             var peopleOverForty = from p in userName
-                                  where p.Name == name 
+                                  .Where (p => p.Name == name )
+                                  .SelectMany(r => r.BooksRented)
+                                  .Select(a => a.Price)
                                   select p;
 
             int amount = 0;
@@ -30,11 +32,8 @@ namespace LibraryBooksIndex.Service
 
             foreach (var item in peopleOverForty)
             {
-                foreach (var s in item.BooksRented)
-                {
-                    amount += 1;
-                    total += s.Price;
-                }
+                amount += 1;
+                total += item;
             }
             Console.WriteLine($"Average price for this user is: {total / amount}");
             Console.ReadLine();
