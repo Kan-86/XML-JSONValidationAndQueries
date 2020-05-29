@@ -25,11 +25,14 @@ namespace LibraryBooksIndex.Service
                                   select p;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             int amount = 0;
             int total = 0;
 
             foreach (var item in peopleOverForty)
 =======
+=======
+>>>>>>> Stashed changes
             if (averagePrice.Count() != 0)
             {
                 double result = averagePrice.Average();
