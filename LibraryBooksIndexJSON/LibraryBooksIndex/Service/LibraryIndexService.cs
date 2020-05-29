@@ -27,15 +27,9 @@ namespace LibraryBooksIndex.Service
                                   .Select(a => a.Price)
                                   select p;
 
-            int amount = 0;
-            int total = 0;
 
-            foreach (var item in peopleOverForty)
-            {
-                amount += 1;
-                total += item;
-            }
-            Console.WriteLine($"Average price for this user is: {total / amount}");
+            double result = peopleOverForty.Average();
+            Console.WriteLine($"Average price for this user is: {result}");
             Console.ReadLine();
         }
 
