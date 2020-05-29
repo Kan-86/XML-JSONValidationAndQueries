@@ -1,14 +1,11 @@
 ﻿using LibraryBooksIndex.Models;
-using LibraryBooksIndex.Repos;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.IO;
 using System.Linq;
-using System.Xml;
-using System.Xml.XPath;
 
 namespace LibraryBooksIndex.Service
 {
@@ -19,7 +16,7 @@ namespace LibraryBooksIndex.Service
         string jsonFile = File.ReadAllText(@"W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\BooksAndUsersXMLJSON\LibraryMockJSON.json");
         public void AveragePriceOfBooks(string name)
         {
-            var userName = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Users>>(jsonFile);
+            var userName = JsonConvert.DeserializeObject<List<Users>>(jsonFile);
 
             var peopleOverForty = from p in userName
                                   .Where (p => p.Name == name )
@@ -27,10 +24,19 @@ namespace LibraryBooksIndex.Service
                                   .Select(a => a.Price)
                                   select p;
 
+<<<<<<< Updated upstream
             int amount = 0;
             int total = 0;
 
             foreach (var item in peopleOverForty)
+=======
+            if (averagePrice.Count() != 0)
+            {
+                double result = averagePrice.Average();
+                Console.WriteLine($"Average price for this user is: {result}");
+            }
+            else
+>>>>>>> Stashed changes
             {
                 amount += 1;
                 total += item;
@@ -41,7 +47,7 @@ namespace LibraryBooksIndex.Service
 
         public void GetTitleWithPrice(double price)
         {
-            var userName = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Users>>(jsonFile);
+            var userName = JsonConvert.DeserializeObject<List<Users>>(jsonFile);
 
             var peopleOverForty = from p in userName
                                   .SelectMany(p => p.BooksRented)
@@ -60,7 +66,7 @@ namespace LibraryBooksIndex.Service
 
         public void SearchForUserByName(string name)
         {
-            var userName = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Users>>(jsonFile);
+            var userName = JsonConvert.DeserializeObject<List<Users>>(jsonFile);
 
             var userCollection = from p in userName
                                   where p.Name == name
@@ -88,7 +94,7 @@ namespace LibraryBooksIndex.Service
         {
             JSchema schema = JSchema.Parse(jsonSchema);
 
-            var model = JArray.Parse(jsonFile);
+            var model = JContainer.Parse(jsonFile);
 
             IList<string> messages;
             bool valid = model.IsValid(schema, out messages); // properly validates
