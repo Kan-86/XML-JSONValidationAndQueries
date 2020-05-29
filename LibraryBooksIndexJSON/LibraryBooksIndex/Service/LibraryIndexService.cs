@@ -11,8 +11,8 @@ namespace LibraryBooksIndex.Service
 {
     public class LibraryIndexService
     {
-        string jsonSchema = File.ReadAllText(@"W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\BooksAndUsersXMLJSON\LibraryJSONSchema.json");
-        string jsonFile = File.ReadAllText(@"W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\BooksAndUsersXMLJSON\LibraryMockJSON.json");
+        string jsonSchema = File.ReadAllText(@"W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\JSON and XML Files\LibraryJSONSchema.json");
+        string jsonFile = File.ReadAllText(@"W:\Skoli\6onn\DBDFinalExam\XML-JSONValidationAndQueries\JSON and XML Files\LibraryMockJSON.json");
         public void AveragePriceOfBooks(string name)
         {
             var userName = JsonConvert.DeserializeObject<List<Users>>(jsonFile);

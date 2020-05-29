@@ -14,10 +14,6 @@ namespace LibraryBooksIndex
         private static LibraryIndexUnvalidatedController unvalLibs;
         static void Main(string[] args)
         {
-            Console.WriteLine("Press 'v' for validated queries, anything else for unvalidated.");
-            var val = Console.ReadLine();
-
-
             Console.WriteLine("Library Index Query\n" +
             "\t 1.  Average Price of Books \n" +
             "\t 2.  Get Titles with specific price \n" +
@@ -28,36 +24,29 @@ namespace LibraryBooksIndex
             switch (input)
             {
                 case "1":
-                    CalculatedAverage(val);
+                    CalculatedAverage();
                     break;
                 case "2":
-                    GetTitleWithPrice(val);
+                    GetTitleWithPrice();
                     break;
                 case "3":
-                    SearchForUserName(val);
+                    SearchForUserName();
                     break;
                 case "4":
-                    ValidateJson(val);
+                    ValidateJson();
                     break;
                 default:
                     break;
             }
         }
 
-        private static void ValidateJson(string val)
+        private static void ValidateJson()
         {
             libs = new LibraryIndexController();
-            if (val == "v")
-            {
-                libs.ValidateJson();
-            }
-            else
-            {
-                libs.ValidateJson();
-            }
+            libs.ValidateJson();
         }
 
-        private static void SearchForUserName(string val)
+        private static void SearchForUserName()
         {
             libs = new LibraryIndexController();
             unvalLibs = new LibraryIndexUnvalidatedController();
@@ -65,17 +54,10 @@ namespace LibraryBooksIndex
             Console.WriteLine("Please input name you want to search for:");
             var name = Console.ReadLine();
             Console.Clear();
-            if (val == "v")
-            {
-                libs.SearchForUserByName(name);
-            }
-            else
-            {
-                unvalLibs.SearchForUserByName(name);
-            }
+            libs.SearchForUserByName(name);
         }
 
-        private static void GetTitleWithPrice(string val)
+        private static void GetTitleWithPrice()
         {
             libs = new LibraryIndexController();
             unvalLibs = new LibraryIndexUnvalidatedController();
@@ -83,17 +65,10 @@ namespace LibraryBooksIndex
             Console.WriteLine("Please insert the price (Between 0 and 2599:");
             double price = Convert.ToDouble(Console.ReadLine());
             Console.Clear();
-            if (val == "v")
-            {
-                libs.GetTitleWithPrice(price);
-            }
-            else
-            {
-                unvalLibs.GetTitleWithPrice(price);
-            }
+             libs.GetTitleWithPrice(price);
         }
 
-        private static void CalculatedAverage(string val)
+        private static void CalculatedAverage()
         {
             libs = new LibraryIndexController();
             unvalLibs = new LibraryIndexUnvalidatedController();
@@ -101,14 +76,7 @@ namespace LibraryBooksIndex
             Console.WriteLine("Please insert the name to count Average price");
             var avrg = Console.ReadLine();
             Console.Clear();
-            if (val == "v")
-            {
                 libs.AveragePriceOfBooks(avrg);
-            }
-            else
-            {
-                unvalLibs.AveragePriceOfBooks(avrg);
-            }
         }
     }
 }
