@@ -56,13 +56,33 @@ namespace LibraryBooksIndex.Service
             {
                 Console.WriteLine($"Title: {item}");
             }
-
             Console.ReadLine();
         }
 
         public void SearchForUserByName(string name)
         {
+            var userName = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Users>>(jsonFile);
 
+            var userCollection = from p in userName
+                                  where p.Name == name
+                                  select p;
+
+            Users user = new Users();
+
+            foreach (var usr in userCollection)
+            {
+                user.UserId = usr.UserId;
+                user.Name = usr.Name;
+                user.Address = usr.Address;
+
+            }
+
+            Console.WriteLine($"Results: \n " +
+                                $"\t Id: {user.UserId} \n" +
+                                $"\t Username: {user.Name} \n" +
+                                $"\t Address: {user.Address}");
+
+            Console.ReadLine();
         }
 
         public void ValidateJSONSchema()
