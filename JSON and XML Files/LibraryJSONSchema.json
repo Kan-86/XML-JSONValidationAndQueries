@@ -1,27 +1,33 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "http://json.schemastore.org/2.0.0-csd.2.beta.2018-10-10.json",
   "definitions": {
     "user": {
       "type": "object",
       "properties": {
-        "name": { "type": "string" },
-        "address": { "type": "string" },
-        "booksRented": {
-          "type": "array",
-          "items": { "$ref": "#/definition/booksRented" },
-          "default": []
+        "userId": {
+          "description": "this is the id for a user",
+          "type": "integer"
+        },
+          "name": { "type": "string" },
+          "address": { "type": "string" },
+          "booksRented": {
+            "type": "array",
+            "items": { "$ref": "#/definition/booksRented" },
+            "default": []
+          }
         }
-      }
     }
   },
   "definition": {
     "booksRented": [
       {
+        "bookId":  {"type":  "integer"},
         "title": { "type": "string" },
         "author": { "type": "string" },
         "price": { "type": "integer" },
         "genre": { "type": "string" }
       }
     ]
-  }
+  },
+  "required": [ "userId", "bookId" ]
 }

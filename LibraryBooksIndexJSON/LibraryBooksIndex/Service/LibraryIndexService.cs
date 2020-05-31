@@ -22,6 +22,7 @@ namespace LibraryBooksIndex.Service
                                   .SelectMany(r => r.BooksRented)
                                   .Select(a => a.Price)
                                   select p;
+
             if (averagePrice.Count() != 0)
             {
                 double result = averagePrice.Average();
@@ -100,11 +101,17 @@ namespace LibraryBooksIndex.Service
 
             IList<string> messages;
             bool valid = model.IsValid(schema, out messages); // properly validates
-            Console.WriteLine(valid);
 
-            foreach (var item in messages)
+            if (valid)
             {
-                Console.WriteLine(item);
+                Console.WriteLine("The JSON Schema is valid.");
+            }
+            else
+            {
+                foreach (var item in messages)
+                {
+                    Console.WriteLine($"Error message: \n \t {item}");
+                }
             }
             Console.ReadLine();
         }

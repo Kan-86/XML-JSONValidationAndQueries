@@ -28,7 +28,6 @@ namespace LibraryBooksIndex.Service
             _libRepo = new LibraryIndexRepo();
             OpenXML();
 
-            
             // Find the average cost of a book.
             // This expression uses standard XPath syntax.
             strExpression = $"sum(/Library/User/BooksRented[../Name = '{name}']/Price) " +
